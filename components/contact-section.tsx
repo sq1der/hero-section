@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 
+
 export default function ContactSection() {
   const [formState, setFormState] = useState({
     name: "",
@@ -16,7 +17,7 @@ export default function ContactSection() {
     phone: "",
     message: "",
   })
-
+  const [isLoading, setIsLoading] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
@@ -25,7 +26,7 @@ export default function ContactSection() {
     setFormState((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
@@ -45,6 +46,47 @@ export default function ContactSection() {
         setIsSubmitted(false)
       }, 5000)
     }, 1500)
+    const formData = new FormData(e.currentTarget as HTMLFormElement)
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      message: formData.get('message') as string || '',
+    }
+
+    try {
+      await sendToTelegram(data)
+      alert('Заявка отправлена! Мы скоро свяжемся с вами.')
+    } catch (error) {
+      console.error('Ошибка отправки:', error)
+      alert('Произошла ошибка при отправке. Пожалуйста, попробуйте ещё раз.')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  const sendToTelegram = async (data: {
+    name: string
+    email: string
+    phone: string
+    message: string
+  }) => {
+    const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN
+    const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID
+    
+    const text = `📌 Новая заявка!\n\n👤 Имя: ${data.name}\n📧 Email: ${data.email}\n📞 Телефон: ${data.phone}\n📝 Сообщение: ${data.message}`
+    const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: text,
+        parse_mode: 'HTML'
+      })
+    })
+    
+    if (!response.ok) throw new Error('Ошибка отправки в Telegram')
   }
 
   return (

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { X } from "lucide-react"
 import { usePopup } from "@/context/popup-context"
 import { Button } from "@/components/ui/button"
@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 
 export default function PopupForm() {
+  const [isLoading, setIsLoading] = useState(false)
   const { isOpen, formType, closePopup } = usePopup()
   const formRef = useRef<HTMLDivElement>(null)
 
@@ -63,6 +64,56 @@ export default function PopupForm() {
         return "Заказать консультацию"
     }
   }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
+    
+    const formData = new FormData(e.currentTarget as HTMLFormElement)
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      message: formData.get('message') as string || '',
+      formType: formType || 'default'
+    }
+
+    try {
+      await sendToTelegram(data)
+      alert('Заявка отправлена! Мы скоро свяжемся с вами.')
+      closePopup()
+    } catch (error) {
+      console.error('Ошибка отправки:', error)
+      alert('Произошла ошибка при отправке. Пожалуйста, попробуйте ещё раз.')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  const sendToTelegram = async (data: {
+    name: string
+    email: string
+    phone: string
+    message: string
+    formType: string
+  }) => {
+    const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN
+    const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID
+    
+    const text = `📌 Новая заявка (${data.formType})!\n\n👤 Имя: ${data.name}\n📧 Email: ${data.email}\n📞 Телефон: ${data.phone}\n📝 Сообщение: ${data.message}`
+    const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: text,
+        parse_mode: 'HTML'
+      })
+    })
+    
+    if (!response.ok) throw new Error('Ошибка отправки в Telegram')
+  }
+
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-fadeIn">
@@ -81,7 +132,7 @@ export default function PopupForm() {
           </button>
         </div>
 
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="space-y-2">
             <Label htmlFor="name">Ваше имя</Label>
             <Input
@@ -128,9 +179,13 @@ export default function PopupForm() {
           )}
 
           <div className="pt-2">
-            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
-              Отправить заявку
-            </Button>
+          <Button 
+        type="submit" 
+        className="w-full bg-blue-600 hover:bg-blue-700"
+        disabled={isLoading}
+      >
+        {isLoading ? 'Отправка...' : 'Отправить заявку'}
+      </Button>
           </div>
 
           <p className="text-xs text-gray-400 text-center mt-4">

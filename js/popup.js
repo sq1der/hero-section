@@ -86,3 +86,41 @@ function initPopup() {
     })
   }
 }
+
+document.querySelector('.popup-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formData = {
+      name: document.getElementById('popup-name').value,
+      email: document.getElementById('popup-email').value,
+      phone: document.getElementById('popup-phone').value,
+      message: document.getElementById('popup-message').value
+  };
+
+  // Отправка в Telegram
+  const botToken = '7979049133:AAHjRV9wEuxyWXEYV3KmCey8tdfij0-q5xs';
+  const chatId = '844291620';
+  
+  const text = `Новая заявка!\n\nИмя: ${formData.name}\nEmail: ${formData.email}\nТелефон: ${formData.phone}\nСообщение: ${formData.message}`;
+  
+  fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          chat_id: chatId,
+          text: text
+      })
+  })
+  .then(response => response.json())
+  .then(data => {
+      alert('Заявка отправлена! Мы скоро свяжемся с вами.');
+      document.querySelector('.popup-form').reset();
+      document.getElementById('popup').style.display = 'none';
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      alert('Произошла ошибка при отправке.');
+  });
+});
