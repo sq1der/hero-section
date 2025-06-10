@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mol Digital - Создание быстрых и масштабируемых сайтов</title>
+    <meta name="description" content="Агентство Mol Digital создаёт продающие сайты с усиленной защитой от взлома и высокой конверсией в продажу">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Подключаем шрифт Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Индикатор прокрутки -->
+    <div class="scroll-indicator">
+        <div class="scroll-indicator-progress"></div>
+    </div>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <div class="blinking-logo"></div>
+                    <span class="logo-text">Mol Digital</span>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Открыть меню">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <nav class="main-nav">
+                    <a href="#" class="nav-link">Услуги</a>
+                    <a href="#our-works" class="nav-link">Наши работы</a>
+                    <a href="#pricing" class="nav-link">Цены</a>
+                    <a href="#testimonials" class="nav-link">Отзывы</a>
+                    <a href="#contact" class="nav-link">Контакты</a>
+                </nav>
+                <button class="btn btn-primary contact-btn" data-form-type="contact">Связаться</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo-container">
+                <div class="blinking-logo"></div>
+                <span class="logo-text">Mol Digital</span>
+            </div>
+            <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Закрыть меню">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="#" class="mobile-nav-link">Услуги</a>
+            <a href="#our-works" class="mobile-nav-link">Наши работы</a>
+            <a href="#pricing" class="mobile-nav-link">Цены</a>
+            <a href="#testimonials" class="mobile-nav-link">Отзывы</a>
+            <a href="#contact" class="mobile-nav-link">Контакты</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <button class="btn btn-primary btn-full contact-btn" data-form-type="contact">Связаться с нами</button>
+        </div>
+    </div>
+
+    <!-- Главный раздел -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <a href="#our-works" class="view-works-link">
+                        <span>Посмотреть наши работы</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <h1 class="hero-title">Мы создаём быстрые, масштабируемые сайты для бизнеса любого размера</h1>
+                    <p class="hero-description">
+                        Агенстов Mol Digital создаёт продающий сайты с усиленной защитой от взлома и высокой конверсией в продажу.
+                        Наши сайты легко рекламировать и расширять
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg contact-btn" data-form-type="contact">
+                            Заказать консультацию
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <a href="#our-works" class="btn btn-outline btn-lg">
+                            <span class="btn-text-with-icon">
+                                Наши работы
+                                <svg class="chevron-right" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-preview">
+                    <div class="browser-window">
+                        <div class="browser-header">
+                            <div class="browser-buttons">
+                                <div class="browser-button red"></div>
+                                <div class="browser-button yellow"></div>
+                                <div class="browser-button green"></div>
+                            </div>
+                            <div class="browser-address-bar"></div>
+                        </div>
+                        <div class="carousel-container">
+                            <div class="carousel" id="hero-carousel">
+                                <div class="carousel-slide active" data-index="0">
+                                    <img src="assets/images/website-screenshot.jpeg" alt="Сайт образовательного агентства в Италии" class="carousel-image">
+                                </div>
+                                <div class="carousel-slide" data-index="1">
+                                    <img src="assets/images/website-screenshot-2.jpeg" alt="Сайт проверки квалификации МЛС" class="carousel-image">
+                                </div>
+                            </div>
+                            <button class="carousel-nav prev" aria-label="Предыдущий сайт">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            <button class="carousel-nav next" aria-label="Следующий сайт">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                            <div class="carousel-indicators">
+                                <button class="carousel-indicator active" data-index="0" aria-label="Перейти к сайту 1"></button>
+                                <button class="carousel-indicator" data-index="1" aria-label="Перейти к сайту 2"></button>
+                            </div>
+                            <div class="carousel-hint">Свайпните для переключения</div>
+                        </div>
+                    </div>
+                    <div class="projects-counter">
+                        <div class="counter-number">100+</div>
+                        <div class="counter-text">успешных проектов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел с нашими работами -->
+    <section id="our-works" class="our-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши работы</h2>
+                <p class="section-description">
+                    Ознакомьтесь с нашими последними проектами. Мы создаем современные, функциональные и красивые сайты для
+                    различных отраслей бизнеса.
+                </p>
+            </div>
+
+            <div class="works-content">
+                <div class="project-info">
+                    <div class="project-header">
+                        <h3 class="project-title">KursGo</h3>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <p class="project-description">Образовательная платформа для курсов программирования</p>
+                    <div class="project-tags">
+                        <span class="tag">Образование</span>
+                        <span class="tag">Курсы</span>
+                        <span class="tag">Программирование</span>
+                    </div>
+
+                    <div class="project-features">
+                        <h4 class="features-title">Особенности проекта:</h4>
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <span>Каталог курсов</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <span>Личный кабинет</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <span>Онлайн-оплата</span>
+                            </li>
+                            <li class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <span>Адаптивный дизайн</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://kursgo.kz" target="_blank" rel="noopener noreferrer" class="btn btn-gradient desktop-only">
+                            <span class="btn-text-with-icon">
+                                Посетить сайт
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </span>
+                        </a>
+                        <button class="btn btn-outline toggle-scroll desktop-only">
+                            <span class="btn-text-with-icon">
+                                <svg class="pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="6" y="4" width="4" height="16"></rect>
+                                    <rect x="14" y="4" width="4" height="16"></rect>
+                                </svg>
+                                <span class="toggle-scroll-text">Остановить прокрутку</span>
+                            </span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="project-preview">
+                    <div class="browser-window">
+                        <div class="browser-header">
+                            <div class="browser-buttons">
+                                <div class="browser-button red"></div>
+                                <div class="browser-button yellow"></div>
+                                <div class="browser-button green"></div>
+                            </div>
+                            <div class="browser-address-bar">
+                                <span class="browser-url">https://kursgo.kz</span>
+                            </div>
+                        </div>
+                        <div class="auto-scroll-container" id="project-scroll">
+                            <img src="assets/images/projects/kursgo.png" alt="Скриншот сайта KursGo" class="project-screenshot">
+                        </div>
+                    </div>
+                    <div class="scroll-indicator-vertical">
+                        <div class="scroll-indicator-progress-vertical"></div>
+                    </div>
+                    <div class="scroll-hint">Наведите для остановки прокрутки</div>
+                    <div class="project-navigation">
+                        <button class="nav-btn prev">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                            Предыдущий проект
+                        </button>
+                        <div class="nav-indicators">
+                            <button class="nav-indicator active" data-index="0"></button>
+                            <button class="nav-indicator" data-index="1"></button>
+                            <button class="nav-indicator" data-index="2"></button>
+                            <button class="nav-indicator" data-index="3"></button>
+                            <button class="nav-indicator" data-index="4"></button>
+                        </div>
+                        <button class="nav-btn next">
+                            Следующий проект
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-stats">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <h3 class="stat-title">Завершенных проектов</h3>
+                    <p class="stat-description">
+                        Мы успешно реализовали более 50 проектов различной сложности для клиентов из разных отраслей.
+                    </p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <h3 class="stat-title">Довольных клиентов</h3>
+                    <p class="stat-description">
+                        Все наши клиенты остались довольны результатом работы и рекомендуют нас своим партнерам.
+                    </p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <h3 class="stat-title">Техническая поддержка</h3>
+                    <p class="stat-description">
+                        Мы обеспечиваем круглосуточную техническую поддержку для всех наших проектов.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел с ценами -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши тарифы</h2>
+                <p class="section-description">
+                    Выберите оптимальное решение для вашего бизнеса. Мы предлагаем различные варианты сайтов под любые задачи и
+                    бюджеты.
+                </p>
+            </div>
+
+            <div class="pricing-cards">
+                <!-- Landing Page -->
+                <div class="pricing-card">
+                    <div class="card-content">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Landing Page</h3>
+                        <div class="price">
+                            <span class="price-prefix">от</span>
+                            <span class="price-value">250,000</span>
+                            <div class="price-currency">
+                                <span>KZT</span>
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            Идеальное решение для презентации продукта, услуги или события. Одностраничный сайт с высокой
+                            конверсией.
+                        </p>
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Адаптивный дизайн</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>SEO-оптимизация</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Форма обратной связи</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Интеграция с аналитикой</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Базовая анимация</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-full contact-btn" data-form-type="landing">
+                            Заказать Landing Page
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Корпоративный сайт -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Популярный</div>
+                    <div class="card-content">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <path d="M9 9h6v6H9z"></path>
+                                <path d="M9 1v3"></path>
+                                <path d="M15 1v3"></path>
+                                <path d="M9 20v3"></path>
+                                <path d="M15 20v3"></path>
+                                <path d="M20 9h3"></path>
+                                <path d="M20 14h3"></path>
+                                <path d="M1 9h3"></path>
+                                <path d="M1 14h3"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Корпоративный сайт</h3>
+                        <div class="price">
+                            <span class="price-prefix">от</span>
+                            <span class="price-value">550,000</span>
+                            <div class="price-currency">
+                                <span>KZT</span>
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            Полноценный корпоративный сайт с уникальным дизайном и всеми необходимыми функциями для вашего бизнеса.
+                        </p>
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Многостраничный сайт</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Уникальный дизайн</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Админ-панель</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Блог и новости</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Интеграция с CRM</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Расширенная SEO-оптимизация</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Мультиязычность</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-full contact-btn" data-form-type="corporate">
+                            Заказать корпоративный сайт
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Интернет-магазин -->
+                <div class="pricing-card">
+                    <div class="card-content">
+                        <div class="service-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <path d="M16 10a4 4 0 0 1-8 0"></path>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Интернет-магазин</h3>
+                        <div class="price">
+                            <span class="price-prefix">от</span>
+                            <span class="price-value">1,250,000</span>
+                            <div class="price-currency">
+                                <span>KZT</span>
+                            </div>
+                        </div>
+                        <p class="card-description">
+                            Полнофункциональный интернет-магазин с каталогом товаров, корзиной, оплатой и всеми необходимыми
+                            модулями.
+                        </p>
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Каталог товаров</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Корзина и оформление заказа</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Интеграция с платежными системами</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Личный кабинет пользователя</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Система скидок и промокодов</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Интеграция с 1С/ERP</span>
+                            </li>
+                            <li class="feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Мобильное приложение (опционально)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-full contact-btn" data-form-type="store">
+                            Заказать интернет-магазин
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-offer">
+                <p class="custom-offer-text">
+                    Нужно индивидуальное решение? Мы готовы обсудить ваш проект и предложить оптимальный вариант.
+                </p>
+                <button class="btn btn-gradient-outline contact-btn" data-form-type="contact">
+                    <span class="btn-text-with-icon">
+                        Получить индивидуальное предложение
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел с отзывами -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Отзывы наших клиентов</h2>
+                <p class="section-description">
+                    Узнайте, что говорят о нас клиенты, которые уже оценили качество наших услуг и сервиса
+                </p>
+            </div>
+
+            <div class="testimonials-mobile">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                    </div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatars/sergey.jpg" alt="Сергей">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Сергей</h4>
+                            <p class="author-position">CEO, TechVision</p>
+                            <div class="rating">
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Сотрудничество с Mol Digital превзошло все наши ожидания. Они создали для нас корпоративный сайт, который не только выглядит современно, но и отлично работает. Особенно впечатлила скорость загрузки и удобство администрирования. Рекомендую эту команду всем, кто ценит качество и профессионализм.
+                    </p>
+
+                    <div class="testimonial-navigation">
+                        <button class="nav-btn prev" id="testimonial-prev">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <div class="nav-indicators" id="testimonial-indicators">
+                            <button class="nav-indicator active" data-index="0"></button>
+                            <button class="nav-indicator" data-index="1"></button>
+                            <button class="nav-indicator" data-index="2"></button>
+                            <button class="nav-indicator" data-index="3"></button>
+                            <button class="nav-indicator" data-index="4"></button>
+                            <button class="nav-indicator" data-index="5"></button>
+                        </div>
+                        <button class="nav-btn next" id="testimonial-next">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                    </div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatars/sergey.jpg" alt="Сергей">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Сергей</h4>
+                            <p class="author-position">CEO, TechVision</p>
+                            <div class="rating">
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Сотрудничество с Mol Digital превзошло все наши ожидания. Они создали для нас корпоративный сайт, который не только выглядит современно, но и отлично работает. Особенно впечатлила скорость загрузки и удобство администрирования.
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                    </div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatars/aigul.jpg" alt="Айгуль">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Айгуль</h4>
+                            <p class="author-position">Маркетинг-директор, Beauty Shop</p>
+                            <div class="rating">
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Наш интернет-магазин косметики разработан командой Mol Digital. Результат превзошел все ожидания! Сайт не только красивый, но и функциональный. Особенно радует, что после запуска конверсия выросла на 35%.
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                    </div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatars/natasha.jpg" alt="Наташа">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Наташа</h4>
+                            <p class="author-position">Владелец, Студия йоги 'Лотос'</p>
+                            <div class="rating">
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Для нашей студии йоги команда Mol Digital создала лендинг, который помог привлечь новых клиентов. Сайт получился атмосферным и полностью отражает философию нашей студии.
+                    </p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                    </div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatars/nursultan.jpg" alt="Нурсултан">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Нурсултан</h4>
+                            <p class="author-position">Директор, Строительная компания 'Астана-Строй'</p>
+                            <div class="rating">
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Выражаю благодарность команде Mol Digital за разработку корпоративного сайта для нашей строительной компании. Сайт получился информативным, с удобной навигацией и современным дизайном.
+                    </p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                    </div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatars/gaukhar.jpg" alt="Гаухар">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Гаухар</h4>
+                            <p class="author-position">Основатель, Образовательный центр 'Smart Kids'</p>
+                            <div class="rating">
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Обратились в Mol Digital для создания сайта нашего образовательного центра. Команда проявила высокий профессионализм и креативность. Сайт получился ярким, информативным и удобным.
+                    </p>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                    </div>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatars/serik.jpg" alt="Серик">
+                        </div>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Серик</h4>
+                            <p class="author-position">Генеральный директор, Логистическая компания 'TransKZ'</p>
+                            <div class="rating">
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star filled"></span>
+                                <span class="star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Сотрудничаем с Mol Digital уже второй год. За это время они разработали для нас корпоративный сайт и личный кабинет для клиентов. Работа выполнена качественно, все сроки соблюдены.
+                    </p>
+                </div>
+            </div>
+
+            <div class="testimonials-footer">
+                <p class="testimonials-join">
+                    Присоединяйтесь к сотням довольных клиентов и доверьте нам создание вашего сайта
+                </p>
+                <a href="#" class="view-all-link">
+                    Смотреть все отзывы
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел с контактами -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Контакты</h2>
+                <p class="section-description">
+                    Свяжитесь с нами, чтобы обсудить ваш проект или получить консультацию по любым вопросам
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Контактная информация -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3 class="card-title">Наши контакты</h3>
+
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 class="contact-title">Адрес</h4>
+                                    <p class="contact-value">Астана, Достык 5, ЖК Северное Сияние</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 class="contact-title">Телефон</h4>
+                                    <a href="tel:+77026727749" class="contact-link">+7 702 672 7749</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 class="contact-title">Почта</h4>
+                                    <a href="mailto:info@molit.kz" class="contact-link">info@molit.kz</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 class="contact-title">Режим работы</h4>
+                                    <p class="contact-value">Пн-Пт: 9:00 - 18:00</p>
+                                    <p class="contact-value">Сб-Вс: Выходной</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h4 class="social-title">Мы в социальных сетях</h4>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" aria-label="facebook">
+                                    <div class="icon-placeholder"></div>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="instagram">
+                                    <div class="icon-placeholder"></div>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="twitter">
+                                    <div class="icon-placeholder"></div>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="linkedin">
+                                    <div class="icon-placeholder"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карта -->
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.5144566296927!2d71.41692867677872!3d51.12926583957091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245853a4e2d9c0f%3A0x7c4f64e7a6ae5e0!2z0JbQmiDQodC10LLQtdGA0L3QvtC1INCh0LjRj9C90LjQtSwg0JTQvtGB0YLRi9C6IDUsINCQ0YHRgtCw0L3QsCAwMTAwMDAsINCa0LDQt9Cw0YXRgdGC0LDQvQ!5e0!3m2!1sru!2sru!4v1713694845020!5m2!1sru!2sru"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Карта расположения офиса Mol Digital"
+                        ></iframe>
+                        <div class="map-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-lin  height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="map-badge-text">Наш офис</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма обратной связи -->
+                <div class="contact-form-container">
+                    <div class="contact-form-card">
+                        <h3 class="card-title">Напишите нам</h3>
+                        <p class="card-description">
+                            Заполните форму ниже, и мы свяжемся с вами в ближайшее время для обсуждения вашего проекта
+                        </p>
+
+                        <div class="form-success-message" id="form-success" style="display: none;">
+                            <div class="success-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </div>
+                            <h4 class="success-title">Сообщение отправлено!</h4>
+                            <p class="success-text">Спасибо за обращение. Мы свяжемся с вами в ближайшее время.</p>
+                        </div>
+
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Ваше имя</label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="Введите ваше имя" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="Введите ваш email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Телефон</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Введите ваш телефон">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Сообщение</label>
+                                <textarea id="message" name="message" class="form-textarea" placeholder="Опишите ваш проект или вопрос" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-full" id="submit-btn">
+                                <span class="btn-text">Отправить сообщение</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </form>
+
+                        <div class="quick-contact">
+                            <div class="quick-contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                            </div>
+                            <p class="quick-contact-text">
+                                Предпочитаете быстрый ответ? Напишите нам в
+                                <a href="#" class="quick-contact-link">WhatsApp</a>
+                                или
+                                <a href="#" class="quick-contact-link">Telegram</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел с логотипами компаний -->
+    <section class="trusted-companies">
+        <div class="container">
+            <h3 class="trusted-title">Нам доверяют ведущие компании</h3>
+            <p class="trusted-description">Более 100 компаний выбрали нас для создания своих сайтов</p>
+            <div class="companies-grid">
+                <div class="company-card">
+                    <div class="company-logo-container">
+                        <img src="assets/images/logos/changan-logo.png" alt="Логотип Changan" class="company-logo">
+                    </div>
+                </div>
+                <div class="company-card">
+                    <div class="company-logo-container">
+                        <img src="assets/images/logos/kaznks-group-logo.png" alt="Логотип KAZNKS GROUP" class="company-logo">
+                    </div>
+                </div>
+                <div class="company-card">
+                    <div class="company-logo-container">
+                        <img src="assets/images/logos/new-motors-logo.png" alt="Логотип NEW MOTORS.KZ" class="company-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кнопка WhatsApp -->
+    <div class="whatsapp-button" id="whatsapp-button">
+        <button class="whatsapp-btn" aria-label="Связаться через WhatsApp">
+            <div class="whatsapp-icon">
+                <img src="assets/images/whatsapp-icon.png" alt="WhatsApp">
+            </div>
+            <span class="whatsapp-pulse"></span>
+        </button>
+        <div class="whatsapp-tooltip" id="whatsapp-tooltip">
+            Написать в WhatsApp
+            <div class="tooltip-arrow"></div>
+        </div>
+    </div>
+
+    <!-- Кнопка прокрутки наверх -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Прокрутить наверх">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Попап форма -->
+    <div class="popup" id="popup">
+        <div class="popup-overlay"></div>
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title" id="popup-title">Связаться с нами</h3>
+                <button class="popup-close" id="popup-close" aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <form class="popup-form">
+                <div class="form-group">
+                    <label for="popup-name" class="form-label">Ваше имя</label>
+                    <input type="text" id="popup-name" name="name" class="form-input" placeholder="Введите ваше имя" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="popup-email" class="form-label">Email</label>
+                    <input type="email" id="popup-email" name="email" class="form-input" placeholder="Введите ваш email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="popup-phone" class="form-label">Телефон</label>
+                    <input type="tel" id="popup-phone" name="phone" class="form-input" placeholder="Введите ваш телефон">
+                </div>
+
+                <div class="form-group" id="popup-message-group">
+                    <label for="popup-message" class="form-label">Описание проекта</label>
+                    <textarea id="popup-message" name="message" class="form-textarea" placeholder="Опишите ваш проект или задачу"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                    Отправить заявку
+                </button>
+
+                <p class="privacy-policy">
+                    Нажимая кнопку "Отправить заявку", вы соглашаетесь с нашей
+                    <a href="#" class="privacy-link">политикой конфиденциальности</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключаем JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>
